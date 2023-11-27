@@ -28,11 +28,8 @@ export default function TextForm(props) {
     }
     const handleCopyText = () => {
         if(text.length>0){
-            let copyText = document.getElementById("myBox");
-            copyText.select();
-            navigator.clipboard.writeText(copyText.value);
+            navigator.clipboard.writeText(text);
             props.showAlert("Text Coppied", "success")
-            document.getSelection().removeAllRanges()
         }
         else{
             props.showAlert("Empty Text Box", "error")
@@ -75,7 +72,7 @@ export default function TextForm(props) {
 
             <div className='my-3'>
                 <h3 className='my-2'>Your Text Summary</h3>
-                <p>{text.length} Charecters & {text.split(" ").filter((el)=>{return el.length!==0}).length} Words</p>
+                <p>{text.length} Charecters & {text.split(/\s+/).filter((el)=>{return el.length!==0}).length} Words</p>
                 <p>It Takes {0.008 * text.split(" ").filter((el)=>{return el.length!==0}).length} Minute to Read</p>
             </div>
             <h3 className='my-2'>Preview</h3>
