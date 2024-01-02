@@ -65,9 +65,9 @@ export default function TextForm(props) {
             <div className='container'>
                 <button type="button" class={`btn btn-${props.mode==='dark'?"secondary":"primary"} mx-1 my-1`} disabled={text.length===0} onClick={handleUpperCase}>Convert to UpperCase</button>
                 <button type="button" class={`btn btn-${props.mode==='dark'?"secondary":"primary"} mx-1 my-1`} disabled={text.length===0} onClick={handleLowerCase}>Convert to LowerCase</button>
-                <button type="button" class={`btn btn-${props.mode==='dark'?"secondary":"primary"} mx-1 my-1`} disabled={text.length===0} onClick={textClear}>Clear Text</button>
                 <button type="button" class={`btn btn-${props.mode==='dark'?"secondary":"primary"} mx-1 my-1`} disabled={text.length===0} onClick={handleCopyText}>Copy Text</button>
                 <button type="button" class={`btn btn-${props.mode==='dark'?"secondary":"primary"} mx-1 my-1`} disabled={text.length===0} onClick={removeExtraSpace}>Remove Extra Space</button>
+                <button type="button" class={`btn btn-${props.mode==='dark'?"secondary":"primary"} mx-1 my-1`} disabled={text.length===0} onClick={textClear}>Clear Text</button>
             </div>
 
             <div className='my-3'>
